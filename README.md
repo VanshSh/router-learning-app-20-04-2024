@@ -59,7 +59,7 @@
 ---
 
 ```
-- loader is a function that we pass to the place whwere we are creating the routed so now whenever the route gets changed this loader function will get the url and will call the function that is defined in loader and useLoaderData will use the data fetched loader function and will keep our page sync without using useEffect 
+- A loader in react-router is a function that is used to fetch data for a route before it is rendered and useLoaderData will use the data fetched loader function and will keep our page sync without using useEffect 
 
  loader: contactLoader,
 

@@ -2,13 +2,13 @@ import { Form, useLoaderData } from 'react-router-dom'
 import { getContact } from '../contacts'
 
 export async function loader({ params }) {
+  console.log('😇 L-5 in contact.jsx=> ', 'Contact.jsx loader')
   const contact = await getContact(params.contactId)
   return { contact }
 }
 
 export default function Contact() {
   const { contact } = useLoaderData()
-  console.log('😇 L-11 in contact.jsx=> ', contact)
 
   return (
     <div id='contact'>
