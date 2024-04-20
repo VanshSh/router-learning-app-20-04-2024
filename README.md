@@ -40,8 +40,21 @@
 ```
 - Client side routing without using <a href='' ></a> instead use <Link to={}></Link>
 ```
+---
 
 ```
 - useLoaderData,  loader as rootLoader  helps us to pass the data to the route
 
+```
+---
+
+```
+-  <Form> prevents the browser from sending the request to the server and sends it to your route action instead. 
+
+- all of your useLoaderData hooks update and the UI stays in sync with your data automatically.
+
+          <Form method='post'>
+            <button type='submit'>New</button>
+          </Form>
+          
 ```
