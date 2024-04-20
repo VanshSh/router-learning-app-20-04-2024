@@ -62,6 +62,10 @@
 - A loader in react-router is a function that is used to fetch data for a route before it is rendered and useLoaderData will use the data fetched loader function and will keep our page sync without using useEffect 
 
  loader: contactLoader,
+```
 
+---
 
+```
+- action is the function that gets called when the any form is submitted. Instead of sending the data to the server it sends it to the client side routing and sends it to a route action
 ```

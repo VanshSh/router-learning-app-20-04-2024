@@ -1,7 +1,6 @@
 import { Outlet, Link, useLoaderData, Form } from 'react-router-dom'
 import { getContacts, createContact } from '../contacts'
 export async function loader() {
-  console.log('😇 L-4 in root.jsx=> ', 'Root loader')
   const contacts = await getContacts()
   return { contacts }
 }
