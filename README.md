@@ -38,3 +38,9 @@
   </div>
 
 ```
+---
+
+```
+- Client side routing without using <a href='' ></a> instead use <Link to={}></Link>
+
+```
