@@ -71,3 +71,25 @@
 
 - Loaders and actions can both return a Response (makes sense, since they received a Request!). The redirect helper just makes it easier to return a response that tells the app to change locations.
 ```
+--- 
+```
+- NavLink is used to get the current state of the data fetching that react-router is doing for us.
+
+                 <NavLink
+                    to={`contacts/${contact.id}`}
+                    className={({ isActive, isPending }) =>
+                      isActive ? 'active' : isPending ? 'pending' : ''
+                    }
+                  >
+                    {contact.favorite && <span>★</span>}
+                  </NavLink>
+```
+---
+
+```
+- useNavigation returns the current navigation state: it can be one of "idle" | "submitting" | "loading".
+ 
+ const navigation = useNavigation();
+ navigation.state === "loading" ? "loading" : ""
+
+```
