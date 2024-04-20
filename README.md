@@ -44,7 +44,6 @@
 
 ```
 - useLoaderData,  loader as rootLoader  helps us to pass the data to the route
-
 ```
 ---
 
@@ -55,6 +54,14 @@
 
           <Form method='post'>
             <button type='submit'>New</button>
-          </Form>
-          
+          </Form>       
+```
+---
+
+```
+- loader is a function that we pass to the place whwere we are creating the routed so now whenever the route gets changed this loader function will get the url and will call the function that is defined in loader and useLoaderData will use the data fetched loader function and will keep our page sync without using useEffect 
+
+ loader: contactLoader,
+
+
 ```
