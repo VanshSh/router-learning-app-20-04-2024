@@ -68,4 +68,6 @@
 
 ```
 - action is the function that gets called when the any form is submitted. Instead of sending the data to the server it sends it to the client side routing and sends it to a route action
+
+- Loaders and actions can both return a Response (makes sense, since they received a Request!). The redirect helper just makes it easier to return a response that tells the app to change locations.
 ```
