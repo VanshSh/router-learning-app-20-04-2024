@@ -4,7 +4,6 @@
     <RouterProvider router={router}>
       <App />
     </RouterProvider>
-
  ```
 ---
 
@@ -12,7 +11,6 @@
 - This will provide the error that was thrown
   const error = useRouteError()
   console.log('😇 L-6 in error-page.jsx=> ', error.data)
-
 ```
 ---
 
@@ -36,11 +34,14 @@
   <div>
   <Outlet>
   </div>
-
 ```
 ---
 
 ```
 - Client side routing without using <a href='' ></a> instead use <Link to={}></Link>
+```
+
+```
+- useLoaderData,  loader as rootLoader  helps us to pass the data to the route
 
 ```
