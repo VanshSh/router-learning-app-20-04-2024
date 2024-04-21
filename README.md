@@ -111,3 +111,9 @@ For example, if you want to create a route that handles DELETE requests, you wou
         errorElement: <div>Opps.. Something went wrong</div>,
       },
 ```
+---
+
+```
+- Note the { index:true } instead of { path: "" }. That tells the router to match and render this route when the user is at the parent route's exact path, so there are no other child routes to render in the <Outlet>.
+
+```
