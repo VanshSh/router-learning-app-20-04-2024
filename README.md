@@ -88,6 +88,7 @@
 
 ```
 - useNavigation returns the current navigation state: it can be one of "idle" | "submitting" | "loading".
+- It activates when we are going to some other route and the process is in progress.
  
  const navigation = useNavigation();
  navigation.state === "loading" ? "loading" : ""
@@ -115,5 +116,13 @@ For example, if you want to create a route that handles DELETE requests, you wou
 
 ```
 - Note the { index:true } instead of { path: "" }. That tells the router to match and render this route when the user is at the parent route's exact path, so there are no other child routes to render in the <Outlet>.
+```
+---
+```
+- useNavigate is used to use the browser history for navigation
+- Here by clicking the button we will go back one history back in the browser history.
 
+  onClick={() => {
+            navigate(-1)
+          }}
 ```
