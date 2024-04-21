@@ -130,4 +130,7 @@ For example, if you want to create a route that handles DELETE requests, you wou
 ```
 - This form is different from the others we've used, it does not have <form method="post">. The default method is "get". That means when the browser creates the request for the next document, it doesn't put the form data into the request POST body, but into the URLSearchParams of a GET request.
 
+- Because this is a GET, not a POST, React Router does not call the action. Submitting a GET form is the same as clicking a link: only the URL changes. That's why the code we added for filtering is in the loader, not the action of this route.
+
+- This also means it's a normal page navigation. You can click the back button to get back to where you were.
 ```
