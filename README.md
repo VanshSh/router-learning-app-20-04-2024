@@ -167,3 +167,39 @@ specially for search filtering.
 ```
 - Routes can be used without a path, which lets them participate in the UI layout without requiring new path segments in the URL. 
 ```
+--- 
+```
+- You can create the routes in the Object or using JSX 
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route
+      path="/"
+      element={<Root />}
+      loader={rootLoader}
+      action={rootAction}
+      errorElement={<ErrorPage />}
+    >
+      <Route errorElement={<ErrorPage />}>
+        <Route index element={<Index />} />
+        <Route
+          path="contacts/:contactId"
+          element={<Contact />}
+          loader={contactLoader}
+          action={contactAction}
+        />
+        <Route
+          path="contacts/:contactId/edit"
+          element={<EditContact />}
+          loader={contactLoader}
+          action={editAction}
+        />
+        <Route
+          path="contacts/:contactId/destroy"
+          action={destroyAction}
+        />
+      </Route>
+    </Route>
+  )
+);
+```
