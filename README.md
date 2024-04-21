@@ -135,6 +135,7 @@ For example, if you want to create a route that handles DELETE requests, you wou
 - This also means it's a normal page navigation. You can click the back button to get back to where you were.
 ```
 ---
+
 ```
 - This will help us submit the form on change const submit = useSubmit()
 specially for search filtering.
@@ -147,9 +148,19 @@ specially for search filtering.
 
 - We only want to replace search results, not the page before we started searching, so we do a quick check if this is the first search or not and then decide to replace.
 
-  const isFirstSearch = q == null;
+              const isFirstSearch = q == null;
                 submit(event.currentTarget.form, {
                   replace: !isFirstSearch,
                 });
+```
+
+--- 
+
+```
+
+- It's equally as common to want to change data without causing a navigation.
+- For these cases, we have the useFetcher hook. It allows us to communicate with loaders and actions without causing a navigation.
+- The ★ button on the contact page makes sense for this. We aren't creating or deleting a new record, we don't want to change pages, we simply want to change the data on the page we're looking at.
+- Might want to take a look at that form while we're here. As always, our form has fields with a name prop. This form will send formData with a favorite key that's either "true" | "false". Since it's got method="post" it will call the action. Since there is no <fetcher.Form action="..."> prop, it will post to the route where the form is rendered.
 
 ```
