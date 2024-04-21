@@ -157,10 +157,13 @@ specially for search filtering.
 --- 
 
 ```
-
 - It's equally as common to want to change data without causing a navigation.
 - For these cases, we have the useFetcher hook. It allows us to communicate with loaders and actions without causing a navigation.
 - The ★ button on the contact page makes sense for this. We aren't creating or deleting a new record, we don't want to change pages, we simply want to change the data on the page we're looking at.
 - Might want to take a look at that form while we're here. As always, our form has fields with a name prop. This form will send formData with a favorite key that's either "true" | "false". Since it's got method="post" it will call the action. Since there is no <fetcher.Form action="..."> prop, it will post to the route where the form is rendered.
+```
+---
 
+```
+- Routes can be used without a path, which lets them participate in the UI layout without requiring new path segments in the URL. 
 ```
