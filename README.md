@@ -126,3 +126,8 @@ For example, if you want to create a route that handles DELETE requests, you wou
             navigate(-1)
           }}
 ```
+---
+```
+- This form is different from the others we've used, it does not have <form method="post">. The default method is "get". That means when the browser creates the request for the next document, it doesn't put the form data into the request POST body, but into the URLSearchParams of a GET request.
+
+```
