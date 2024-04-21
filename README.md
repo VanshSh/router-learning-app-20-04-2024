@@ -97,4 +97,17 @@
 
 ```
 - Note the action points to "destroy". Like <Link to>, <Form action> can take a relative value. Since the form is rendered in contact/:contactId, then a relative action with destroy will submit the form to contact/:contactId/destroy when clicked.
+
+- In React Router, the action prop is used to specify the action that should be taken when a route is matched. The value of the action prop can be any string, but it is typically used to specify the HTTP method that should be used to make the request.
+For example, if you want to create a route that handles DELETE requests, you would use the following code:
+```
+---
+
+```
+- Here this path has its own error element therefore it will not propogate till the top of the route.
+ {
+        path: 'contacts/:contactId/destroy',
+        action: destroyAction,
+        errorElement: <div>Opps.. Something went wrong</div>,
+      },
 ```
