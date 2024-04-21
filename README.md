@@ -134,3 +134,9 @@ For example, if you want to create a route that handles DELETE requests, you wou
 
 - This also means it's a normal page navigation. You can click the back button to get back to where you were.
 ```
+---
+```
+- This will help us submit the form on change const submit = useSubmit()
+specially for search filtering.
+- Now as you type, the form is submitted automatically!
+```
