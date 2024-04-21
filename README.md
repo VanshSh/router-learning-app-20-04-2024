@@ -140,3 +140,16 @@ For example, if you want to create a route that handles DELETE requests, you wou
 specially for search filtering.
 - Now as you type, the form is submitted automatically!
 ```
+---
+
+```
+- We can avoid this by replacing the current entry in the history stack with the next page, instead of pushing into it.
+
+- We only want to replace search results, not the page before we started searching, so we do a quick check if this is the first search or not and then decide to replace.
+
+  const isFirstSearch = q == null;
+                submit(event.currentTarget.form, {
+                  replace: !isFirstSearch,
+                });
+
+```
